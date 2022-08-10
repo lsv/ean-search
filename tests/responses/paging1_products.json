@@ -1,0 +1,14 @@
+{
+  "page":1,
+  "moreproducts":false,
+  "totalproducts":2,
+  "productlist": [
+    {
+      "ean":"5099750442227",
+      "name":"Michael Jackson, Thriller",
+      "categoryId":"15",
+      "categoryName":"Music",
+      "issuingCountry":"UK"
+    }
+  ]
+}

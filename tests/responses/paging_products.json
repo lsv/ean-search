@@ -1,0 +1,14 @@
+{
+  "page":0,
+  "moreproducts":true,
+  "totalproducts":2,
+  "productlist": [
+    {
+      "ean":"0042286275123",
+      "name":"Stephan Remmler, Bananaboat",
+      "categoryId":"15",
+      "categoryName":"Music",
+      "issuingCountry":"US"
+    }
+  ]
+}

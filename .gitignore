@@ -1,0 +1,10 @@
+/.build
+/.phpunit.cache
+/vendor
+/.php-cs-fixer.cache
+/.phpcs-cache
+/phpunit.xml
+/composer.lock
+/.php-cs-fixer.php
+/.phpcs.xml
+/infection.json

@@ -1,0 +1,61 @@
+{
+    "name": "lsv/ean-search",
+    "description": "A library for EAN and ISBN name lookup and validation using the API on ean-search.org",
+    "keywords": ["EAN","barcode","webservice","REST","UPC","ISBN13","ISBN"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Aarhof",
+            "email": "martin.aarhof@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lsv\\EanSearch\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "symfony/http-client": "^6.1",
+        "symfony/serializer": "^6.1",
+        "symfony/property-access": "^6.1",
+        "symfony/http-foundation": "^6.1"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lsv\\EanSearchTest\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.9",
+        "infection/infection": "^0.26.13",
+        "rregeer/phpunit-coverage-check": "^0.3.1",
+        "phpstan/phpstan": "^1.8",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "scripts": {
+        "fix": [
+            "phpcs",
+            "php-cs-fixer fix",
+            "phpstan",
+            "XDEBUG_MODE=coverage phpunit --exclude long --coverage-text --coverage-html=.build/coverage/html --coverage-clover=.build/coverage/clover.xml --coverage-xml=.build/coverage/xml --log-junit=.build/coverage/junit.xml",
+            "coverage-check .build/coverage/clover.xml 100",
+            "infection --skip-initial-tests --threads=8 --coverage=.build/coverage"
+        ],
+        "test": [
+            "phpcs",
+            "php-cs-fixer fix --dry-run --diff",
+            "phpstan",
+            "XDEBUG_MODE=coverage phpunit --coverage-text --coverage-html=.build/coverage/html --coverage-clover=.build/coverage/clover.xml --coverage-xml=.build/coverage/xml --log-junit=.build/coverage/junit.xml",
+            "coverage-check .build/coverage/clover.xml 100",
+            "infection --skip-initial-tests --threads=8 --coverage=.build/coverage"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
+    }
+}

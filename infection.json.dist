@@ -1,0 +1,16 @@
+{
+    "source": {
+        "directories": [
+            "src"
+        ],
+        "excludes": [
+            "Utils/Serializer.php"
+        ]
+    },
+    "logs": {
+        "text": ".build/infection/log.log",
+        "html": ".build/infection/log.html",
+        "summary": ".build/infection/summary.log",
+        "json": ".build/infection/log.json"
+    }
+}
